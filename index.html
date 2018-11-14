@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html data-use-rem="750">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="keywords" content="村头博物馆   ">
+		<meta name="description" content="村头博物馆 ">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="format-detection" content="telphone=no, email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true">
+		<title>村头博物馆</title>
+		<link rel="stylesheet" type="text/css" href="css/collect.css"/>
+	</head>
+	<body>
+		
+    <div class="wrap">
+    	<div class="loading">
+	    	<img src="img/loading/index_title.png" class="loadimg1"/>
+	    	<img src="img/loading/index_loading.png" class="loadimg2"/>
+	    	<div class="loadbox"><div class="loadcontent"></div></div>
+	    	<div class="start"><img src="img/loading/startimg.png"/></div>
+	    	<img src="img/loading/index_www.png" class="loadimg3"/>
+    	</div>
+    	<div class="box">
+    		
+    		<!--音乐控制-->
+    		<audio src="font/hometown.mp3" id="audio1" loop="loop"></audio>
+    		<!--鸡鸣音效-->
+    		<audio src="http://fjdx.sc.chinaz.com/Files/DownLoad/sound1/201702/8378.mp3" id="audio2"></audio>
+    		<audio src="font/open.mp3" id="audio3"></audio>
+    		<audio src="font/dianji.mp3" id="audio4"></audio>
+    		<audio src="font/naozhong.mp3" id="audio5" loop="loop"></audio>
+    		<img src="img/yingyuebtn.png" class="yinyuebtn2"/>
+    		<div class="musicbox"><img src="img/yingyuebtn1.png" class="yinyuebtn"/></div>
+    		<img src="img/quanbg.jpg" class="bg"/>
+    		<!--自制热区-->
+    		<div class="shimoqu"></div>
+    		<div class="shanchequ"></div>
+    		<!--物品-->
+    		<img src="img/wupin/daocao.gif" title="稻草" name="gif/daocao_w.png" class="item item1 shouji jieshao" data-src='0.9rem'/>
+    		<img src="img/wupin/egg.gif" title="鸡蛋" class="item3"/>
+    		<img src="img/wupin/ji.gif" title="鸡"  name="咯咯咯咯，咯咯咯咯，饲料真好吃。" class="item item4"/>
+    		<img src="img/wupin/lipa.gif" title="犁耙" data-src='0.9rem' name="gif/lipa_w.png" class="item item5 jieshao"/>
+    		<img src="img/wupin/louche.gif" title="耧车" data-src='0.9rem' name="gif/louche_w.png" class="item item6 jieshao"/>
+    		<img src="img/wupin/shanche.gif" title="扇车" name="gif/shanche_w.png" class="item item8 jieshao"/>
+    		<img src="img/wupin/shimo.gif" title="石磨" name="gif/shimo_w.png" class="item item9"/>
+    		<img src="img/wupin/shuiche.gif" title="翻车" data-src='0.9rem' name="gif/fanche_w.png" class="item item10 jieshao"/>
+    		<img src="img/wupin/siliao.gif" title="饲料" data-src='0.9rem' name="gif/siliao_w.png" class="item item11 jieshao shouji"/>
+    		<img src="img/wupin/suoyi.gif" title="蓑衣" data-src='0.5rem' name="gif/suoyi_w.png" class="item item12 jieshao"/>
+    		<img src="img/wupin/fangzhiyou.png" class="item13"/>
+    		<img src="img/wupin/biandan.png" title="扁担" data-src='0.6rem' name="gif/biandan_w.png" class="item item14 jieshao"/>
+    		<img src="img/wupin/canzhi.png" title="铲子" data-src='0.9rem' name="gif/canzhi_w.png" class="item item15 jieshao shouji" />
+    		<img src="img/wupin/naozhong.png" title="闹钟" data-src='0.9rem' name="gif/naozhong_w1.png" class="item item17 " />
+    		<img src="img/wupin/xiadan.gif" title="下蛋" class="item18"/>
+    		<img src="img/wupin/chutou.png" title="锄头" data-src='0.9rem'  name="gif/chutou_w.png"  class="item item19 jieshao"/>
+    		<img src="img/wupin/zulan.png" title="竹篮" name="gif/zhulan_w.png" class="item item20 jieshao shouji" data-src='0.9rem'/>
+    		<img src="img/zhuzi.png" class="item21"/>
+    		<img src="gif/egg.gif" class="item22"/>
+    		<img src="img/guanggao.png" class="item23"/>
+    		<img src="img/zhibiao.gif" class="item24"/>
+    		<img src="img/qingwa.gif" class="item25"/>
+    		<img src="img/taiyang.gif" class="item26"/>
+    		<img src="img/daoying.gif" class="item27"/>
+    		<img src="img/men.gif" class="item28"/>
+    		<img src="img/dianji.gif" class="item29"/>
+    	</div>
+        <!--引导-->
+        <div class="yindao">
+        	<img src="gif/yindao.png"/>
+        	<div class="yindaobtn"></div>
+        </div>
+    	<!--房间内-->
+    	<div class="house" id="house">
+    		<img src="img/housebg.jpg" class="housebg"/>
+    		<img src="img/caidian.png" class="dianshi"/>
+    		<img src="img/wupin/dianchi.gif" title="电池" data-src='0.9rem' name="gif/dianchi_w.png" class="item item2 dianchia" />
+    		<img src="img/wupin/rili.gif" title="日历" data-src='0.9rem' name="gif/rili_w.png" class="item item7 jieshao"/>
+    		<img src="img/wupin/cucaoji.png" title="除草剂" data-src='0.7rem' name="gif/chucaoji_w.png" class="item item16 jieshao"/>
+    	</div>
+    	<!--说明-搜集按钮-->
+    	<div class="boxbtn">
+    		<img src="img/gameDescription.png" class="boxbtn1"/>
+    		<img src="img/collect.png" class="boxbtn2"/>
+    		<img src="img/tuichubtn.png" class="boxbtn3"/>
+    	</div>
+    	
+    		<!--游戏说明弹窗-->
+      	<div class="alert">
+      		<img src="img/close.png" class="close"/>
+      		<img src="img/descriptionbg.png"/>
+      		<div class="alertbox">
+      			<img src="img/crt.jpg"/>
+      		</div>
+      	</div>
+      	<!--收集弹窗-->
+      	<div class="alertcollect">
+      		<img src="img/collectbg.png" class="collectbg"/>
+      		<img src="img/close.png" class="close"/>
+      		<!--找到的物品-->
+      		<ul>
+      			<li>
+      				<div class="wupin" name='gif/wei_w.png' title="??"><img src="img/wenhao.png"/></div>
+      				<p>未知物品</p>
+      			</li>
+      			<li class="margin1">
+      				<div class="wupin" name='gif/wei_w.png' title="??"><img src="img/wenhao.png"/></div>
+      				<p>未知物品</p>
+      			</li>
+      			<li>
+      				<div class="wupin" name='gif/wei_w.png' title="??"><img src="img/wenhao.png"/></div>
+      				<p>未知物品</p>
+      			</li>
+      			<li>
+      				<div class="wupin" name='gif/wei_w.png' title="??"><img src="img/wenhao.png"/></div>
+      				<p>未知物品</p>
+      			</li>
+      			<li class="margin1">
+      				<div class="wupin" name='gif/wei_w.png' title="??"><img src="img/wenhao.png"/></div>
+      				<p>未知物品</p>
+      			</li>
+      			<li>
+      				<div class="wupin" name='gif/wei_w.png' title="??"><img src="img/wenhao.png"/></div>
+      				<p>未知物品</p>
+      			</li>
+      		</ul>
+      	</div>
+      	
+      	<!--闹钟提示弹出-->
+      	<div class="nztips">
+      		<img src="img/close.png" class="close"/>
+      		<img src="img/tipsnaoz.png" class="img1"/>
+      		<img src="img/you.gif" class="dianji"/>
+      	</div>
+      	<!--搜集好弹窗-->
+      	<div class="alertsuccess">
+      		<img src="img/close.png" class="close"/>
+      		<a href="javascript:void(0);" class="changebtn"><img src="img/change.png" class="change"/></a>
+      		<img src="img/succeed.png" class="succeed"/>
+      		<img src="gif/egg.gif" class="egg"/>
+      	</div>
+      
+      	<!--物品介绍弹窗-->
+      	<div class="alertintroduce">
+      		<img src="img/close.png" class="close"/>
+      		<img src="gif/daocao_w.png" class="sort"/>
+      	</div>
+      	
+      		<!--终极任务-->
+      	<div class="alertwork">
+      		<img src="img/you.gif" class="dianji"/>
+      		<img src="img/close.png" class="close"/>
+      		<img src="img/work.png" class="work"/>
+      		<img src="gif/egg.gif" class="egg"/>
+      	</div>
+    </div>
+	</body>
+</html>
+<script>
+	!function(win){var doc=win.document,html=doc.documentElement,option=html.getAttribute("data-use-rem");if(null!==option){var baseWidth="NaN"==parseInt(option).toString()?750:parseInt(option),grids=baseWidth/100,clientWidth=html.clientWidth||320;html.style.fontSize=clientWidth/grids+"px";var testDom=document.createElement("div"),testDomWidth=0,adjustRatio=0;testDom.style.cssText="height:0;width:1rem;",doc.body.appendChild(testDom);var calcTestDom=function(){if(testDomWidth=testDom.offsetWidth,testDomWidth!==Math.round(clientWidth/grids)){adjustRatio=clientWidth/grids/testDomWidth;var reCalcRem=clientWidth*adjustRatio/grids;html.style.fontSize=reCalcRem+"px"}else doc.body.removeChild(testDom)};setTimeout(calcTestDom,20);var reCalc=function(){var newCW=html.clientWidth;newCW!==clientWidth&&(clientWidth=newCW,html.style.fontSize=newCW*(adjustRatio?adjustRatio:1)/grids+"px")};if(reCalc(),doc.addEventListener){var resizeEvt="orientationchange"in win?"orientationchange":"resize";win.addEventListener(resizeEvt,reCalc,!1),doc.addEventListener("DOMContentLoaded",reCalc,!1)}}}(window);
+</script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!--加载-->
+ <script type="text/javascript">
+    	$(function(){
+    		var imgS=$('img');
+    	    var num=0;
+    	    imgS.each(function(i){
+					var oimg=new Image();
+					oimg.onload=function(){
+						oimg.onload=null;
+						num++;
+						$('.loadcontent').width(parseInt(num/$('img').length*100)+'%');
+						if(num>=$('img').length){
+//							alert(num);
+							setTimeout(function(){
+								$('.loadbox').fadeOut();
+							},500);
+							setTimeout(function(){
+								$('.loadimg2').fadeOut();
+							},800);
+							setTimeout(function(){
+								$('.start').fadeIn();
+							},1000);
+							setTimeout(function(){
+								$('.start img').fadeIn();
+							},1200);
+						}
+					}
+					oimg.src=imgS[i].src;
+				});
+				//点击开始按钮loading消失
+				$('.start').click(function(){
+					$('.loadimg1').css('transform','scale(41.6)');
+					setTimeout(function(){
+						$('.loading').fadeOut();
+					},1000);
+					$('.start').fadeOut(100);
+					$('.loadimg3').fadeOut(100);
+				})
+    	})
+    		</script>
+    <!--搜集动画uijs-->
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <!--ios自动播放-->
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+<script> 
+     //一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以 
+     document.getElementById('audio1').play(); 
+     $(".yinyuebtn").addClass("yinyuebtn1");
+    //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效 
+    document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('audio1').play(); 
+        $(".yinyuebtn").addClass("yinyuebtn1");
+       
+    }, false); 
+</script>
+    <script type="text/javascript">
+    	$(function(){
+    		//引导
+    		$('.yindaobtn').click(function(){
+    			$(".yindao").slideUp(500);
+    			$(".alert").slideDown(500);
+    		})
+    		//音乐播放按钮
+    		var audio1=document.getElementById("audio1");
+    		if(audio1.paused){
+    				audio1.play();
+    				$(".yinyuebtn").addClass("yinyuebtn1");
+    			}
+    		$(".musicbox").click(function(){
+    			if(audio1.paused){
+    				audio1.play();
+    				$(".yinyuebtn").addClass("yinyuebtn1");
+    			}else{
+    				audio1.pause();
+    				$(".yinyuebtn").removeClass("yinyuebtn1");
+    			}
+    		});
+    	
+    		//防止点击背景单独显示该图片
+//  		$("img").click(function (event) {
+//			event.preventDefault();
+//			});
+    		
+    		//打开说明弹窗
+      	$(".boxbtn1").click(function(){
+      		$(".alert").slideToggle(500);
+      	});
+      	//关闭弹窗
+      		$(".alert .close").click(function(){
+      		$(".alert").slideUp(500);
+      	});
+      		//打开搜集弹窗
+      	$(".boxbtn2").click(function(){
+      		$(".alertcollect").slideToggle(500);
+      	});
+      	//关闭闹钟提示
+      	$('.nztips .close').click(function(){
+      		$('.nztips').slideUp(500);
+      	})
+      	//退出房间
+      	$(".boxbtn3").click(function(){
+      		document.getElementById("audio3").play();
+      		$(".house").fadeOut(500);
+      		$(".boxbtn3").hide();
+      	});
+      	//电击电视跳转村头直播
+      	$('.house .dianshi').click(function(){
+      		window.location.href='http://www.ct918.cn/vhall2.html';
+      	});
+      	//点击门室内弹窗打开
+      	$('.item28').click(function(){
+      		document.getElementById("audio3").play();
+      			$(".house").fadeIn(1000);
+	      		$(".boxbtn3").show();
+	      		$(".boxbtn3").css('display','block');
+      		
+      	})
+      	//关闭弹窗
+      		$(".alertcollect .close").click(function(){
+      		$(".alertcollect").slideUp(500);
+      	});
+      	//介绍弹窗
+      	//稻草
+		$('.jieshao').click(function(){
+			$(".alertintroduce").slideDown(500);
+			document.getElementById("audio4").play();
+			var src=$(this).attr('name');
+		      		$(".wrap .alertintroduce .sort").attr('src',src);
+		});
+          
+      	//关闭弹窗
+      		$(".alertintroduce .close").click(function(){
+      		$(".alertintroduce").slideUp(500);
+      	});
+      	//电池
+		$('.dianchia').click(function(){
+			$(".alertintroduce").slideDown(500);
+			document.getElementById("audio4").play();
+			var src=$(this).attr('name');
+		      		$(".wrap .alertintroduce .sort").attr('src',src);
+		});
+          
+      	//关闭弹窗
+      		$(".alertintroduce .close").click(function(){
+      		$(".alertintroduce").slideUp(500);
+      	});
+      //点击鸡蛋弹出兑换弹窗
+      	$(".item22").click(function(){
+      		$(".alertsuccess").slideDown(500);
+      	});
+      	$(".alertsuccess .close").click(function(){
+      			$(".alertsuccess").slideUp(500);
+      		});
+        var issubmit = true;
+      	$(".changebtn").click(function(){
+      		if(issubmit){
+	  	   	  $.ajax({
+				  url:"wechat/submit",
+				  data:{},
+				  type:"post",
+				  dataType:"json",
+				  success:function(data){
+					  console.log(data);
+					  var o = data.object;
+					  alert(o.msg);
+					  issubmit = false;
+				  }
+		   	  });
+      		}else{
+      			//todo
+      		}
+      	});
+      	//点击收集好的物品弹出介绍弹窗
+      	$(".alertcollect li").click(function(){
+      		var index=$(this).index();
+      		var jieshao=$(".alertcollect li .wupin").eq(index).attr("name");
+      		$(".alertintroduce").slideDown(500);
+      		$(".alertintroduce .sort").attr("src",jieshao);
+      	});
+      	//关闭最后提示弹窗
+      	var yanz=1;
+      		$(".alertwork .close").click(function(){
+      			document.getElementById("audio5").play();
+      			$(".item17").attr("src","img/naozhongxiang.gif");
+      			$(".item17").width("1.3rem");
+      			$(".item17").css({top:"3.2rem",left:"4.08rem"});
+      		$(".alertwork").slideUp(500);
+      		$(".box").scrollLeft('0px');
+      		yanz=2;
+      			//终极任务后点击闹钟鸡下蛋
+      		if(yanz==2){
+      			$(".item17").attr("name","gif/naozhong_w2.png");
+      		$(".item17").click(function(){
+      				//关闭弹窗
+      		$(".alertintroduce .close").click(function(){
+      		$(".alertintroduce").slideUp(500);
+      			$(".item4").fadeOut(100);
+      			$(".item18").fadeIn(100);
+      			setTimeout(function(){
+      				$(".item3").fadeIn(100);
+      			},4500);
+      			setTimeout(function(){
+      				$(".item22").fadeIn(300);
+      			},7300);
+      			
+      	});
+      			
+      		});
+      	}else{
+      		alert("11");
+      	}
+      	});
+     		//找特定物品
+    		var number1=0;
+    		var numbera=0;
+    		
+    		$(".jieshao").one("click",function(){
+    			var widthw=$(this).attr("data-src");
+    			var jieshao=$(this).attr("name");
+    			var thisurl=$(this).attr("src");
+    			var name=$(this).attr("title");
+    			var souji=$(this);
+    			if(numbera<4){
+    				 //搜集动画
+       $('.alertintroduce .close').one('click', function () {
+       	 	//搜集声音提示
+       	document.getElementById("audio2").play();
+        var cart = $('.boxbtn2');
+        var imgtodrag = souji;
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .css({
+                'opacity': '1',
+                top: '4.5rem',
+                left: '3.6rem',
+                    'position': 'absolute',
+                    'height': '1rem',
+                    'width': 'auto',
+                    'z-index': '100'
+            })
+                .appendTo($('.wrap'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 'auto',
+                    'height': '0.4rem'
+            }, 1000, 'easeInOutExpo');
+//          imgclone.find(".close").animate({'width':0,'top':0,'right':0});
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+         $('.alertintroduce').slideUp(500);
+    });
+    				$(".alertcollect ul li .wupin img").eq(number1).width(widthw);
+    				$(".alertcollect ul li .wupin img").eq(number1).attr("src",thisurl);
+    				$(".alertcollect ul li .wupin").eq(number1).attr("title",name);
+    				$(".alertcollect ul li .wupin").eq(number1).attr("name",jieshao);
+    				$(".alertcollect ul li  p").eq(number1).html(name);
+    				numbera++;
+    				number1++;
+    			}
+    			if(number1==6){
+    				//音效
+    				$(".alertwork").slideDown(500);
+//  				console.log(number1);
+    				navigator.vibrate(1000);
+    				
+    			}
+    			console.log("number:"+number1);
+    			
+    		});
+    		
+    		//电池
+    		$(".item2").one("click",function(){
+    			yanz=3;
+      		    var jieshao=$(this).attr("name");
+    			var thisurl=$(this).attr("src");
+    			var name=$(this).attr("title");
+    			var souji=$(this);
+    				 //搜集动画
+       $('.alertintroduce .close').one('click', function () {
+       	 	//搜集声音提示
+       	document.getElementById("audio2").play();
+        var cart = $('.boxbtn2');
+        var imgtodrag = souji;
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .css({
+                'opacity': '1',
+                top: '4.5rem',
+                left: '3.6rem',
+                    'position': 'absolute',
+                    'height': '1rem',
+                    'width': 'auto',
+                    'z-index': '100'
+            })
+                .appendTo($('.wrap'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 'auto',
+                    'height': '0.4rem'
+            }, 1000, 'easeInOutExpo');
+//          imgclone.find(".close").animate({'width':0,'top':0,'right':0});
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+         $('.alertintroduce').slideUp(500);
+    });
+    				$(".alertcollect ul li .wupin img").eq(number1).width("0.9rem");
+    				$(".alertcollect ul li .wupin img").eq(number1).attr("src",thisurl);
+    				$(".alertcollect ul li .wupin").eq(number1).attr("title",name);
+    				$(".alertcollect ul li .wupin").eq(number1).attr("name",jieshao);
+    				$(".alertcollect ul li  p").eq(number1).html(name);
+    				number1++;
+    				console.log("number:"+number1);
+    		});
+    		//点击闹钟
+    		$(".wrap .box .item17").click(function(){
+    			var souimg=$(this);
+    			document.getElementById("audio4").play();
+    			if(yanz==3&&number1==5){
+      		
+    			var jieshao=$(".wrap .box .item17").attr("name");
+    			var thisurl=$(".wrap .box .item17").attr("src");
+    			var name=$(".wrap .box .item17").attr("title");
+      		        $(".alertintroduce .sort").attr("src",jieshao);
+      		        $(".alertintroduce").slideDown(500);
+      		        //收集
+      		        if(number1<6){
+    				 //搜集动画
+       $('.alertintroduce .close').one('click', function () {
+       	yanz=2;
+       	 	//搜集声音提示
+       	document.getElementById("audio2").play();
+        var cart = $('.boxbtn2');
+        var imgtodrag = souimg;
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .css({
+                'opacity': '1',
+                top: '4.5rem',
+                left: '3.6rem',
+                    'position': 'absolute',
+                    'height': '1rem',
+                    'width': 'auto',
+                    'z-index': '100'
+            })
+                .appendTo($('.wrap'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 'auto',
+                    'height': '0.4rem'
+            }, 1000, 'easeInOutExpo');
+//          imgclone.find(".close").animate({'width':0,'top':0,'right':0});
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+         $('.alertintroduce').slideUp(500);
+        
+    });
+    				$(".alertcollect ul li .wupin img").eq(number1).width('0.9rem');
+    				$(".alertcollect ul li .wupin img").eq(number1).attr("src",thisurl);
+    				$(".alertcollect ul li .wupin ").eq(number1).attr("title",name);
+    				$(".alertcollect ul li .wupin ").eq(number1).attr("name",jieshao);
+    				$(".alertcollect ul li  p").eq(number1).html(name);
+    			}
+    			if(number1==5){
+    				//音效
+    				$(".alertwork").slideDown(500);
+//  				console.log(number1);
+    				navigator.vibrate(1000);
+    				$(".alertcollect ul li .wupin img").eq(number1).width('0.9rem');
+    				$(".alertcollect ul li .wupin img").eq(number1).attr("src",thisurl);
+    				$(".alertcollect ul li .wupin ").eq(number1).attr("title",name);
+    				$(".alertcollect ul li .wupin ").eq(number1).attr("name",jieshao);
+    				$(".alertcollect ul li  p").eq(number1).html(name);
+    				
+    			}
+//  			alert('ok');
+//  			number1++;
+      		       }if(yanz==3&&number1!=5){
+      		
+    			var jieshao=$(".wrap .box .item17").attr("name");
+    			var thisurl=$(".wrap .box .item17").attr("src");
+    			var name=$(".wrap .box .item17").attr("title");
+    			
+      		        $(".alertintroduce .sort").attr("src",jieshao);
+      		        $(".alertintroduce").slideDown(500);
+      		        //收集
+      		        if(number1<6){
+    				 //搜集动画
+       $('.alertintroduce .close').one('click', function () {
+       	yanz=4;
+       	 	//搜集声音提示
+       	document.getElementById("audio2").play();
+        var cart = $('.boxbtn2');
+        var imgtodrag = souimg;
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .css({
+                'opacity': '1',
+                top: '4.5rem',
+                left: '3.6rem',
+                    'position': 'absolute',
+                    'height': '1rem',
+                    'width': 'auto',
+                    'z-index': '100'
+            })
+                .appendTo($('.wrap'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 'auto',
+                    'height': '0.4rem'
+            }, 1000, 'easeInOutExpo');
+//          imgclone.find(".close").animate({'width':0,'top':0,'right':0});
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+         $('.alertintroduce').slideUp(500);
+    });
+    				$(".alertcollect ul li .wupin img").eq(number1).width('0.9rem');
+    				$(".alertcollect ul li .wupin img").eq(number1).attr("src",thisurl);
+    				$(".alertcollect ul li .wupin").eq(number1).attr("title",name);
+    				$(".alertcollect ul li .wupin").eq(number1).attr("name",jieshao);
+    				$(".alertcollect ul li  p").eq(number1).html(name);
+    			}
+    			if(number1==6){
+    				//音效
+    				$(".alertwork").slideDown(500);
+//  				console.log(number1);
+      		        	document.getElementById("audio2").play();
+    				navigator.vibrate(1000);
+    				
+    			}
+//  			alert('no');
+    			number1++;
+    			
+      		       }else if(yanz==1){
+	      		       	$(".nztips").slideDown(500);
+      		       }else if(yanz==4){
+      		       	document.getElementById("audio5").pause();
+	      		        $(".wrap .box .item17").attr("src","img/wupin/naozhong.png");
+	      		        $(".alertintroduce .sort").attr("src","gif/naozhong_w1.png");
+	      		        $(".alertintroduce").slideDown(500);
+      		       }else if(yanz==2){
+      		       		document.getElementById("audio5").pause();
+      		       	    $(".item17").attr("src","img/naozhongxiang.gif");
+		      			$(".item17").width("1.3rem");
+		      			$(".item17").css({top:"3.2rem",left:"4.08rem"});
+	      		       	$(".alertintroduce").slideDown(500);
+	      		        $(".alertintroduce .sort").attr("src","gif/naozhong_w2.png");
+      		       }
+      		       console.log("number:"+number1);
+    		});
+    		//终极任务
+    		$(".nztips .close").click(function(){
+    			$(".nztips").slideUp(500);
+    		});
+      	
+    		//石墨区
+    		$(".shimoqu").click(function(){
+      		$(".alertintroduce").slideDown(500);
+      		document.getElementById("audio4").play();
+      		 $(".wrap .box .item9").attr("src","img/wupin/shimo.gif");
+    			var jieshao=$(".wrap .box .item9").attr("name");
+      		        $(".alertintroduce .sort").attr("src",jieshao);
+    		});
+    		
+    	
+    	//扇车区
+    		$(".shanchequ").click(function(){
+      		$(".alertintroduce").slideDown(500);
+      		document.getElementById("audio4").play();
+    			var jieshao=$(".wrap .box .item8").attr("name");
+      		        $(".alertintroduce .sort").attr("src",jieshao);
+    		});
+    		//跳村头商城
+    		$('.item23').click(function(){
+    			window.location.href='http://www.ct918.cn/index.html';
+    		});
+    	})
+    </script>

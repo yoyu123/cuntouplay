@@ -1,0 +1,815 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	-webkit-user-select：none;
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+	font-family: "微软雅黑";
+	-webkit-overflow-scrolling:touch;
+}
+html{
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	-webkit-overflow-scrolling:touch;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	-webkit-overflow-scrolling:touch;
+}
+a{
+	text-decoration: none;
+}
+img{
+	outline: none;
+    border: none;
+    /*vertical-align: middle;*/
+   /* max-width: 100%;*/
+}
+.wrap{
+	background-color: #FFFFFF;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	min-width: 3.2rem;
+	max-width: 7.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-overflow-scrolling:touch;
+}
+/*loading画面*/
+.wrap .loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+	z-index: 71;
+	overflow: hidden;
+}
+.wrap .loading img{
+	display: block;
+}
+.wrap .loading .loadimg1{
+	transform-origin: 49% 36%;
+	-webkit-transform-origin: 49% 36%;
+	-moz-transform-origin: 49% 36%;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	width: 100%;
+	margin-top: 0.8rem;
+	margin-bottom: 0.6rem;
+	transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+}
+
+.wrap .loading .loadimg2{
+	/*display: none;*/
+	width: 3rem;
+	margin: 0 auto;
+}
+.wrap .loading .loadimg3{
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 0.1rem;
+	left: 0;
+}
+/*进度*/
+.wrap .loading .loadbox{
+	/*display: none;*/
+	overflow: hidden;
+	border:0.06rem solid #ad8b70;
+	width: 4.5rem;
+	height: 0.6rem;
+	border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	margin: 0.3rem auto;
+}
+.wrap .loading .loadbox .loadcontent{
+	height: 0.48rem;
+	/*width: 20%;*/
+	background-color: #F2E6C6;
+}
+/*开始按钮*/
+.wrap .loading .start{
+	display: none;
+	position: absolute;
+    top:4.92rem;
+	left: 0;
+	right: 0;
+	width:2.4rem ;
+	height:0.8rem ;
+	background-color: #F2E6C6;
+	border:0.07rem solid #ad8b70;
+	border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	margin: 1.64rem auto;
+	z-index: 130;
+}
+.wrap .loading .start img{
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width:1.8rem ;
+	margin: auto auto;
+}
+.wrap .box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+}
+/*音乐按钮*/
+.wrap .box .yinyuebtn2{
+	position: fixed;
+	top: 0;
+	left: 0.2rem;
+	z-index: 20;
+	width: 0.7rem;
+}
+.wrap .box .musicbox{
+	position: fixed;
+    width: 0.72rem;
+    height: 0.72rem;
+    top: 0.41rem;
+    left: 0.2rem;
+    z-index: 20;
+}
+.wrap .box .yinyuebtn{
+	position: absolute;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+	z-index: 20;
+	width: 0.2rem;
+}
+.wrap .box .yinyuebtn1{
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	animation: play1 2s linear infinite;
+	-webkit-animation: play1 2s linear infinite;
+	-moz-animation: play1 2s linear infinite;
+	-ms-animation: play1 2s linear infinite;
+	-o-animation: play1 2s linear infinite;
+}
+@keyframes play1{
+	from{
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		}
+	to{
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		}
+}
+.wrap .box .bg{
+	display: block;
+	width: 500%;
+}
+/*物品*/
+.wrap .box .item{
+	outline: none;
+	cursor: pointer;
+}
+/*热区*/
+.wrap .box .shimoqu{
+    z-index: 30;
+    position: absolute;
+    top: 7.6rem;
+    left: 4.4rem;
+    width: 2.7rem;
+    height: 2.6rem;
+}
+
+.wrap .box .shanchequ{
+    z-index: 30;
+    position: absolute;
+    top: 4.5rem;
+    left: 31.8rem;
+    width: 3.7rem;
+    height: 3.2rem;
+}
+/*水稻*/
+.wrap .box .item1{
+	position: absolute;
+    top: 5.3rem;
+    left: 22rem;
+    width: 5.78rem;
+}
+/*电池*/
+.wrap .item2{
+	position: absolute;
+    top: 8.98rem;
+    left: 0.8rem;
+    width: 0.7rem;
+    z-index: 12;
+}
+/*鸡蛋*/
+.wrap .box .item3{
+	display: none; 
+    position: absolute;
+    top: 12.1rem;
+    left: 19.7rem;
+    width: 1.2rem;
+}
+/*鸡*/
+.wrap .box .item4{
+	position: absolute;
+    top: 11rem;
+    left: 12.3rem;
+    width: 2.6rem;
+    z-index: 14;
+}
+/*犁耙*/
+.wrap .box .item5{
+	position: absolute;
+    top: 6.5rem;
+    left: 12.8rem;
+    width: 3.1rem;
+}
+/*漏车*/
+.wrap .box .item6{
+	position: absolute;
+    top: 6.16rem;
+    left: 25.54rem;
+    width: 3.6rem;
+}
+/*日历*/
+.wrap .item7{
+    position: absolute;
+    top: 5.38rem;
+    left: 5.1rem;
+    width: 1.0rem;
+    z-index: 12;
+}
+/*风车*/
+.wrap .box .item8{
+	position: absolute;
+    top: 4.46rem;
+    left: 31.7rem;
+    width: 4.6rem;
+}
+/*石墨*/
+.wrap .box .item9{
+	position: absolute;
+    top: 7.4rem;
+    left: 4.2rem;
+    width: 3.4rem;
+}
+/*水车*/
+.wrap .box .item10{
+	position: absolute;
+    top: 2.06rem;
+    left: 14.68rem;
+    width: 2.4rem;
+}
+/*饲料*/
+.wrap .box .item11{
+	position: absolute;
+    top: 11.7rem;
+    left: 24.65rem;
+    width: 2rem;
+}
+/*蓑衣*/
+.wrap .box .item12{
+	z-index: 12;
+    position: absolute;
+    top: 8rem;
+    left: 35.4rem;
+    width: 1.4rem;
+}
+/*房子*/
+.wrap .box .item13{
+	position: absolute;
+    top: 1.86rem;
+    left: 32.88rem;
+    width: 4.6rem;
+}
+/*扁担*/
+.wrap .box .item14{
+    z-index: 10;
+    position: absolute;
+    top: 7.4rem;
+    left: 34rem;
+    width: 1.4rem;
+}
+/*铲子*/
+.wrap .box .item15{
+	z-index: 10;
+    position: absolute;
+    top: 12.16rem;
+    left: 0.5rem;
+    width: 1.9rem;
+}
+/*除草剂*/
+.wrap .item16{
+    z-index: 10;
+    position: absolute;
+    top: 5.4rem;;
+    left: 0.6rem;
+    width: 0.34rem;
+}
+/*时钟*/
+.wrap .box .item17{
+	z-index: 10;
+	position: absolute;
+    top: 3.6rem;
+    left: 4.3rem;
+    width: 0.8rem;
+}
+/*下蛋*/
+.wrap .box .item18{
+    display: none; 
+    z-index: 10;
+    position: absolute;
+    top: 10.3rem;
+    left: 13.79rem;
+    width: 4rem;
+}
+/*锄头*/
+.wrap .box .item19{
+	z-index: 10;
+    position: absolute;
+    top: 11.28rem;
+    left: 31.6rem;
+    width: 3.24rem;
+}
+/*锄头*/
+.wrap .box .item20{
+	z-index: 10;
+	position: absolute;
+    top: 11.8rem;
+    left: 8.8rem;
+    width: 2rem;
+}
+/*柱子*/
+.wrap .box .item21{
+	z-index: 10;
+    position: absolute;
+    top: 7.52rem;
+    left: 4.12rem;
+    width: 3.35rem;
+}
+/*鸡蛋*/
+.wrap .box .item22{
+	display: none;
+    z-index: 10;
+    position: absolute;
+    top: 11.7rem;
+    left: 19.8rem;
+    width: 1.8rem;
+}
+/*广告*/
+.wrap .box .item23{
+    z-index: 10;
+    position: absolute;
+    top: 2.8rem;
+    left: 19.8rem;
+    width: 2.2rem;
+}
+/*指标*/
+.wrap .box .item24{
+	z-index: 10;
+    position: absolute;
+    top: 4.8rem;
+    left: 16.4rem;
+    width: 3.9rem;
+}
+/*青蛙*/
+.wrap .box .item25{
+	z-index: 10;
+    position: absolute;
+    top: 8.44rem;
+    left: 22.26rem;
+    width: 1.14rem;
+}
+/*太阳*/
+.wrap .box .item26{
+	z-index: 10;
+    position: absolute;
+    top: 0rem;
+    left: 17.56rem;
+    width: 1.16rem;
+}
+/*倒影*/
+.wrap .box .item27{
+	z-index: 10;
+    position: absolute;
+    top: 4rem;
+    left: 28rem;
+    width: 7.4rem;
+}
+/*门*/
+.wrap .box .item28{
+	z-index: 10;
+    position: absolute;
+    top: 6.5rem;
+    left: 1.1rem;
+    width: 0.9rem;
+   
+}
+/*点击门*/
+.wrap .box .item29{
+	z-index: 10;
+    position: absolute;
+    top: 7.98rem;
+    left: 1.96rem;
+    width: 1rem;
+   
+}
+/*室内弹窗*/
+.wrap .house{
+	display: none;
+	z-index: 50;
+    position: absolute;
+    top: 0rem;
+    left:0rem;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+.wrap .house .housebg{
+	z-index: 10;
+    position: absolute;
+    top: 0rem;
+    left:0rem;
+    width: 100%;
+}
+.wrap .house .dianshi{
+    z-index: 10;
+    position: absolute;
+    top: 6.64rem;
+    left: 4.6rem;
+    width: 3rem;
+}
+.wrap .house .dianshi img{
+    width: 100%;
+}
+/*闹钟提示弹出*/
+.nztips{
+	display: none;
+	z-index: 80;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;
+	width: 6rem;
+	height: 3.864rem;
+}
+.nztips .img1{
+	width: 100%;
+}
+.nztips .dianji{
+	z-index: 3;
+    cursor: pointer;
+    position: absolute;
+    left: 1.3rem;
+    top: 2.2rem;
+    width: 0.9rem;
+}
+.nztips .close{
+	z-index: 2;
+	cursor: pointer;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.3rem;
+	width: 0.5rem;
+}
+/*说明-搜集按钮*/
+.wrap .boxbtn{
+	position: absolute;
+	right: 0.2rem;
+	top: 0.1rem;
+	width: 2rem;
+	height: 2rem;
+	z-index: 60;
+}
+.wrap .boxbtn .boxbtn3{
+	display: none;
+}
+.wrap .boxbtn>img{
+	width: 100%;
+	display: block;
+	margin-top: 0.2rem;
+	cursor: pointer;
+}
+/*引导*/
+.wrap .yindao{
+	z-index: 70;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 6rem;
+    height: 9.28rem;
+	margin: auto auto;
+}
+.wrap .yindao img{
+	width: 100%;
+}
+.wrap .yindao .yindaobtn{
+	width: 2rem;
+	height: 0.8rem;
+	position: absolute;
+	top: 5.25rem;
+	left: 0rem;
+	right: 0rem;
+	margin: 0 auto;
+}
+/*说明弹窗*/
+.wrap .alert{
+	display: none;
+	z-index: 70;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 6rem;
+    height: 9.48rem;
+	margin: auto auto;
+}
+.wrap .alert img{
+	
+	display: block;
+	width: 100%;
+}
+.wrap .alert .close{
+	cursor: pointer;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.3rem;
+	width: 0.5rem;
+}
+.wrap .alert .dianji{
+	position: absolute;
+	left: 1.4rem;
+	top: 2.24rem;
+	width: 0.9rem;
+}
+.wrap .alert .egg{
+	position: absolute;
+	top: 6.86rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 2.4rem;
+}
+/**/
+.wrap .alert .alertbox{
+	padding: 0rem 0.2rem;
+	overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 4.7rem;
+    height: 7.8rem;
+}
+/*收集弹窗*/
+.wrap .alertcollect{
+	display: none;
+	z-index: 70;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 6rem;
+	height: 7rem;
+	margin: auto auto;
+}
+.wrap .alertcollect .tips{
+	position: absolute;
+	bottom: 0.84rem;
+    right: 0.58rem;
+    font-size: 0.26rem;
+	color: #838383;
+}
+.wrap .alertcollect .collectbg{
+	display: block;
+	width: 100%;
+}
+/*关闭*/
+.wrap .alertcollect .close{
+	cursor: pointer;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    width: 0.5rem;
+}
+.wrap .alertcollect ul{
+	width: 4.9rem;
+	position: absolute;
+	top: 1.46rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.wrap .alertcollect ul li{
+	float: left;
+	list-style: none;
+	width: 1.5rem;
+	height: 2.16rem;
+}
+.wrap .alertcollect ul li.margin1{
+	margin: 0 0.2rem;
+
+}
+.wrap .alertcollect ul li .wupin{
+	position: relative;
+	text-align: center;
+	height: 1.5rem;
+	padding: 0.1rem;
+	background:url(../img/wupinbg.png) no-repeat center ;
+	background-size: cover;
+	overflow: hidden;
+}
+.wrap .alertcollect ul li p{
+	font-family:"fz";
+	color: #555555;
+	margin-top: 0.1rem;
+	text-align: center;
+	font-size: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+.wrap .alertcollect ul li .wupin>img{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 0.4rem;
+	display: block;
+	margin: auto auto;
+}
+/*搜集好弹窗*/
+.wrap .alertsuccess{
+	display: none;
+	z-index: 70;
+	position: absolute;
+	top: 3.5rem;
+	left: 0;
+	right: 0;
+	width: 6rem;
+	margin: 0 auto;
+}
+.wrap .alertsuccess .close{
+	cursor: pointer;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    width: 0.5rem;
+}
+.wrap .alertsuccess .succeed{
+	display: block;
+	width: 100%;
+}
+
+.wrap .alertsuccess .egg{
+	cursor: pointer;
+	position: absolute;
+	top: 1.6rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 2.5rem;
+}
+/*关闭*/
+.wrap .alertsuccess a{
+	position: absolute;
+	display: block;
+	top: 5.4rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 2rem;
+}
+.wrap .alertsuccess a img{
+	display: block;
+	width: 100%;
+}
+/*物品介绍弹窗*/
+.wrap .alertintroduce{
+	overflow: hidden;
+	display: none;
+	z-index: 80;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 6rem;
+	height: 7rem;
+	margin: auto auto;
+} 
+.wrap .alertintroduce .sort{
+	width: 100%;
+}
+/*关闭*/
+.wrap .alertintroduce  .close{
+	z-index: 100;
+	cursor: pointer;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.3rem;
+	width: 0.5rem;
+}
+.wrap .alertintroduce .boxsort{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*物品名*/
+.wrap .alertintroduce .boxsort .title{
+	margin-top: 0.36rem;
+	font-size: 0.54rem;
+	text-align: center;
+	color: #64483D;
+	font-weight: bold;
+}
+/*物品图片*/
+.wrap .alertintroduce .boxsort .img{
+	text-align: center;
+	margin: 0.2rem 0;
+}
+.wrap .alertintroduce .boxsort .img img{
+	height: 1rem;
+}
+/*物品介绍*/
+.wrap .alertintroduce .boxsort .content{
+	line-height: 0.5rem;
+    font-size: 0.3rem;
+    padding: 0 0.5rem;
+    color: #555555;
+}
+
+/*终极任务*/
+.wrap .alertwork{
+	display: none;
+	z-index: 80;
+	position: absolute;
+	top: 3.5rem;
+	left: 0;
+	right: 0;
+	width: 6rem;
+	margin: 0 auto;
+}
+.wrap .alertwork .work{
+	display: block;
+	width: 100%;
+}
+/*关闭*/
+.wrap .alertwork .close{
+	z-index: 30;
+	cursor: pointer;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.3rem;
+	width: 0.5rem;
+}
+.wrap .alertwork .dianji{
+	z-index: 30;
+	cursor: pointer;
+	position: absolute;
+	left: 1.3rem;
+	top: 2.3rem;
+	width: 0.9rem;
+}
+.wrap .alertwork .egg{
+	cursor: pointer;
+	position: absolute;
+	top: 4.3rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 2.5rem;
+}
